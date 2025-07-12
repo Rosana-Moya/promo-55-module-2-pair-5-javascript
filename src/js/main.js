@@ -109,11 +109,11 @@ dogsList.innerHTML += "<li>" + secondDogImage + " " + secondDogName + "</li>"; /
 dogsList.innerHTML += "<li>" + thirdDogImage + " " + thirdDogName + "</li>";
 // Conclusión : mismo resultado 
 
-const nameLength = document.querySelector(".name__length");
-const student = "Silvia Benitez Masip";
-console.log(student.length);
+// const nameLength = document.querySelector(".name__length");
+// const student = "Silvia Benitez Masip";
+// console.log(student.length);
 
-nameLength.innerHTML = "El nombre de mi compañera es " + student + " y está compuesto por " + student.length + " caracteres";
+// nameLength.innerHTML = "El nombre de mi compañera es " + student + " y está compuesto por " + student.length + " caracteres";
 
 
 //Ejercicios Funcionales
@@ -154,5 +154,77 @@ console.log(`¿El número ${numero} es par? ${resultado}`);
 // IVA
 
 function iva (a) {
-console.log("Precio sin IVA: " + a + ", IVA:");
+console.log("Precio sin IVA: " + a + ", IVA:" + (a * 0.21) + " y total: " + (a + (a * 0.21)));
 }
+
+iva (10);
+
+//Analizar
+
+// modificamos una variable de ámbito global
+let secretLetter = 'y';
+function mySecretLetter() {
+  secretLetter = 'x';
+  return secretLetter;
+}
+console.log(secretLetter); // devuelve "y"
+console.log(mySecretLetter()); // devuelve "x"
+
+//Extra 1
+
+// const btnEl = getEl('.btn');
+
+// function getEl(selector) {
+//             return document.querySelector(selector);
+//         }
+
+
+//         // Ejemplos de uso
+//         const divEl = getEl('.user');
+//         const h1El = getEl('.user__name');
+//         if (!h1El) {
+//         console.error ("No existe ningún elemento con clase, id o tag llamado `${selector}`");
+//           }
+//         const pEl = getEl('.name__length');
+//         getEl.innerHTML = pEl;
+//         if (pEl===esPar) {
+//         console.log("Este número es impar");
+//           }
+
+//         function esPar(numero) {
+//         return numero % 2 === 0;
+
+//         }
+
+
+//         h1El .style.backgroundColor = "blue";
+
+//         console.log(h1El);
+
+        //Extra error
+
+        // const h1Error 
+
+        function getEl(selector) {
+            return document.querySelector(selector);
+        }
+
+        function esPar(numero) {
+        return numero % 2 === 0;
+
+        }
+
+
+         const pEl = getEl('.name__length').textContent;
+        console.log(pEl);
+        const pElNumber = parseInt(pEl);
+        console.log(pElNumber);
+        console.log(esPar);
+        if (esPar(pElNumber)) {
+        console.log("Este número es par");
+          }
+
+        
+
+        
+
