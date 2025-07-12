@@ -114,3 +114,45 @@ const student = "Silvia Benitez Masip";
 console.log(student.length);
 
 nameLength.innerHTML = "El nombre de mi compañera es " + student + " y está compuesto por " + student.length + " caracteres";
+
+
+//Ejercicios Funcionales
+
+function mult (a, b) {
+  console.log(a * b);
+  return a * b;
+}
+
+mult (3, 4);
+
+const multResult = mult (3,4);
+console.log(multResult);
+
+//media
+
+function mult2 (a, b, c, d) {
+  console.log((a + b + c + d) / 4);
+  return (a + b + c + d) / 4;
+}
+
+mult2 (3, 4, 5, 6);
+const multResult2 = mult2 (3, 4, 5, 6);
+console.log(multResult2)
+
+
+//par e impar
+
+function esPar(numero) {
+    return numero % 2 === 0;
+}
+
+// Ejemplo de ejecución
+let numero = 8;
+let resultado = esPar(numero);
+console.log(`¿El número ${numero} es par? ${resultado}`);
+
+// IVA
+
+function iva (a) {
+console.log("Precio sin IVA: " + a + ", IVA:");
+}
