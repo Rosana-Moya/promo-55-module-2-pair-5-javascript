@@ -283,3 +283,54 @@ user.addAge = () => {
 };
 
 user.addAge();
+
+//ARRAYS 
+ 
+const workWithMovies = () => {
+
+const movies = ["Jurassic Park", "Una joven prometedora", "Harta"];
+
+movies [3] = "Split";
+ console.log(movies);
+
+movies[1] = "Malditos bastardos";
+ console.log(movies);
+//  console.log(workWithMovies);
+}
+
+workWithMovies ();
+
+// console.log(movies);
+
+
+// CALCULADORA
+
+const calculator = (isBorder, boxWidth, boxPadding, boxBorder) => { 
+if (isBorder) {}
+else {}
+}
+calculator(true, 30, 20, 34);
+
+// De Ana
+
+const calculateWidth = (isBorderBox, width, padding, border) => {
+  if (isBorderBox) {
+    return `El ancho del contenido es ${width}, y el ancho de la caja es ${width}`;
+  }
+  const contentSize = width + padding * 2 + border * 2;
+  return `El ancho del contenido es ${contentSize}, y el ancho de la caja es ${width}`;
+};
+
+const result = calculateWidth(false, 300, 10, 5);
+console.log(result);
+
+
+
+// const sum = (a, b) => {
+//   console.log(a+b);
+// } 
+
+// sum (1,2)
+
+
+
