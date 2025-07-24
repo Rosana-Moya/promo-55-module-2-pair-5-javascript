@@ -266,23 +266,23 @@ adalaber2.showBio();
 
 // Ejercicio 5 - developer
 
-const user = {  
-}
+// const user = {  
+// }
 
-const job = "developer";
+// const job = "developer";
 
-user.firstName = "Pedro";
-user.lastName = "Ruiz";
-user.age = 35;
-user.job = job;
-console.log(`${user.firstName} ${user.lastName} ${user.age} ${user.job}`);
+// user.firstName = "Pedro";
+// user.lastName = "Ruiz";
+// user.age = 35;
+// user.job = job;
+// console.log(`${user.firstName} ${user.lastName} ${user.age} ${user.job}`);
 
-user.addAge = () => {
-  user.age++;
-  console.log(user.age);
-};
+// user.addAge = () => {
+//   user.age++;
+//   console.log(user.age);
+// };
 
-user.addAge();
+// user.addAge();
 
 //ARRAYS 
  
@@ -361,5 +361,119 @@ acc = acc + numbers[i] / numbers.length;
 
 console.log("El resultado es: " + acc);
 
+// MAP 1
+
+const marks = [5, 4, 6, 7, 9];
+
+const oneMarks = marks.map((mark) => {
+  return mark +1;
+
+});
+
+console.log(oneMarks);
+
+// MAP 2
+
+// const names = ['María', 'Lucía', 'Susana', 'Rocío', 'Inmaculada'];
+
+// const helloNames = names.map((name) => {
+//   return  "Bienvenida  " + name;
+
+// });
+
+// console.log(helloNames);
+
+// MAP 3
+
+// const users = [ 
+//  { name: "María", isPremium: false }, 
+//  { name: "Lucía", isPremium: true }, 
+//  { name: "Susana", isPremium: true }, 
+//  { name: "Rocío", isPremium: false }, 
+//  { name: "Inmaculada", isPremium: false }, 
+// ]; 
+
+//  users.forEach ((user) => {
+//    if (user.isPremium) {
+//     console.log(`Bienvenida ${user.name} Gracias por confiar en nosotros`);
+//    }
+//    else {
+//     console.log(`Bienvenida ${user.name}`);
+//    }
+// });
+
+// FILTER 1
+
+// const users = [ 
+//  { name: "María", isPremium: false }, 
+//  { name: "Lucía", isPremium: true }, 
+//  { name: "Susana", isPremium: true }, 
+//  { name: "Rocío", isPremium: false }, 
+//  { name: "Inmaculada", isPremium: false }, 
+// ]; 
+
+// const premiumUsers = users.filter ((user) => {
+//   return user.isPremium === true;
+
+// });
+
+// console.log(premiumUsers);
+
+//FILTER 2
+
+// const pins = [2389, 2384, 2837, 5232, 8998]; 
+
+// const pairPins = pins.filter((pin) => {
+//    return pin % 2 === 0;
+// });
+
+// console.log(pairPins);
+
+// FILTER 3
+
+const users = [ 
+ { name: "María", isPremium: false, pin: 2389 }, 
+ { name: "Lucía", isPremium: true, pin: 2384 }, 
+ { name: "Susana", isPremium: true, pin: 2837 }, 
+ { name: "Rocío", isPremium: false, pin: 5232 }, 
+ { name: "Inmaculada", isPremium: false, pin: 8998 }, 
+]; 
+ 
+// const pairPins = users.filter((user) => {
+//    return user.pin % 2 === 0;
+// });
+ 
+// console.log(pairPins);
+
+// FIND 1
+
+// const usersFind = users.find((user) => {
+//    return user.pin === 5232;
+// });
+ 
+// console.log(usersFind);
 
 
+// FIND 3 B
+
+// const indexToRemove = users.findIndex(user => user.pin === 5232);
+
+// if (indexToRemove !== -1) {
+//   users.splice(indexToRemove, 1); // Elimina 1 elemento en esa posición
+// }
+
+// console.log(users);
+
+
+//SORT
+
+// users.sort((a, b) => a.name.localeCompare(b.name));
+
+// console.log(users);
+
+//SORT menor a mayor
+
+users.sort((a, b) => a.pin - b.pin);
+
+
+console.log(users);
