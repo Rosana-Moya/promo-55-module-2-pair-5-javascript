@@ -478,6 +478,7 @@ users.sort((a, b) => a.pin - b.pin);
 
 console.log(users);
 
+
 // Peticiones al servidor 1
 
 // Ejercicio 1
@@ -503,17 +504,35 @@ console.log(users);
 
 // ejercicio 2 - chihuahua
 
-const chihuahua = document.querySelector(".chihuahua");
-const getDog = document.querySelector(".getDog");
+// const chihuahua = document.querySelector(".chihuahua");
+// const getDog = document.querySelector(".getDog");
+
+// const handleClickButton = () => {
+
+// fetch("https://dog.ceo/api/breed/chihuahua/images/random")
+// .then((response) => response.json())
+// .then((data) => {
+//   console.log(data);
+//   chihuahua.src = data.message;
+// });
+// };
+
+// getDog.addEventListener("click", handleClickButton);
+
+// ejercicio 3. Github
+
+const input = document.querySelector(".input");
+const button = document.querySelector(".button");
+const img = document.querySelector(".img");
 
 const handleClickButton = () => {
 
-fetch("https://dog.ceo/api/breed/chihuahua/images/random")
+fetch("https://api.github.com/users/{username}")
 .then((response) => response.json())
 .then((data) => {
   console.log(data);
-  chihuahua.src = data.message;
+  img.src = data.message;
 });
 };
 
-getDog.addEventListener("click", handleClickButton);
+form.addEventListener("submit", handleClickButton);
