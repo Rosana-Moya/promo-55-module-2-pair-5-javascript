@@ -477,3 +477,44 @@ users.sort((a, b) => a.pin - b.pin);
 
 
 console.log(users);
+
+// Peticiones al servidor 1
+
+// Ejercicio 1
+
+// const numberP = document.querySelector(".number");
+// const numberClick = document.querySelector(".numberClick");
+
+// const handleClickButton = () => {
+
+// fetch("https://api.rand.fun/number/integer")
+//   .then((reponse) => {
+//     console.log(reponse);
+//     return reponse.json();
+//   })
+//   .then((data) => {
+//     console.log(data);
+//     numberP.innerHTML = data.result;
+//   });
+
+// };
+
+// numberClick.addEventListener("click", handleClickButton);
+
+// ejercicio 2 - chihuahua
+
+const perro = document.querySelector(".perro");
+const getDog = document.querySelector(".getDog");
+
+const handleClickButton = () => {
+
+fetch("https://dog.ceo/api/breed/chihuahua/images/random")
+.then((response) => response.json())
+.then((data) => {
+  console.log(data);
+  image.src = data.message;
+  perro.innerHTML = data.result;
+});
+};
+
+getDog.addEventListener("click", handleClickButton);
