@@ -57,11 +57,11 @@ if (number === 0) {
 //Ejercicio 3
 
 // avatar por defecto
-const DEFAULT_AVATAR = "http://placehold.jp/150x150.png";
+//const DEFAULT_AVATAR = "http://placehold.jp/150x150.png";
 // avatar que eligió el usuario al registrarse
-let userAvatar = "http://www.fillmurray.com/300/300";
+//let userAvatar = "http://www.fillmurray.com/300/300";
 
-document.querySelector(".user__avatar").innerHTML = userAvatar;
+// document.querySelector(".user__avatar").innerHTML = userAvatar;
 
 // ejercicios de datos
 
@@ -101,9 +101,9 @@ const thirdDogImage =
   "https://images.dog.ceo/breeds/affenpinscher/n02110627_7065.jpg";
 const thirdDogName = "Lana";
 
-dogsList.innerHTML += `<li> ${firstDogImage + " " + firstDogName} </li>`; //Esto esta hecho con interpolación
-dogsList.innerHTML += "<li>" + secondDogImage + " " + secondDogName + "</li>"; // Esto con concatenación
-dogsList.innerHTML += "<li>" + thirdDogImage + " " + thirdDogName + "</li>";
+// dogsList.innerHTML += `<li> ${firstDogImage + " " + firstDogName} </li>`; //Esto esta hecho con interpolación
+// dogsList.innerHTML += "<li>" + secondDogImage + " " + secondDogName + "</li>"; // Esto con concatenación
+// dogsList.innerHTML += "<li>" + thirdDogImage + " " + thirdDogName + "</li>";
 // Conclusión : mismo resultado
 
 // const nameLength = document.querySelector(".name__length");
@@ -208,14 +208,14 @@ function esPar(numero) {
   return numero % 2 === 0;
 }
 
-const pEl = getEl(".name__length").textContent;
-console.log(pEl);
-const pElNumber = parseInt(pEl);
-console.log(pElNumber);
-console.log(esPar);
-if (esPar(pElNumber)) {
-  console.log("Este número es par");
-}
+// const pEl = getEl(".name__length").textContent;
+// console.log(pEl);
+//const pElNumber = parseInt(pEl);
+//console.log(pElNumber);
+//console.log(esPar);
+//if (esPar(pElNumber)) {
+//  console.log("Este número es par");
+// }
 
 // Lección 2.7 Objetos
 //Ejercicio 1 
@@ -503,7 +503,7 @@ console.log(users);
 
 // ejercicio 2 - chihuahua
 
-const perro = document.querySelector(".perro");
+const chihuahua = document.querySelector(".chihuahua");
 const getDog = document.querySelector(".getDog");
 
 const handleClickButton = () => {
@@ -512,8 +512,7 @@ fetch("https://dog.ceo/api/breed/chihuahua/images/random")
 .then((response) => response.json())
 .then((data) => {
   console.log(data);
-  image.src = data.message;
-  perro.innerHTML = data.result;
+  chihuahua.src = data.message;
 });
 };
 
