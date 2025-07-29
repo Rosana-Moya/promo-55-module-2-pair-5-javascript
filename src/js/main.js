@@ -350,16 +350,16 @@ console.log(result);
 
 // Ejercicio 2
 
-const numbers = [1, 2, 3, 4, 5];
+// const numbers = [1, 2, 3, 4, 5];
 
-numbers.push(6);
+// numbers.push(6);
 
-let acc = 0;
-for (let i = 0; i < numbers.length; i++) {
-acc = acc + numbers[i] / numbers.length;
-}
+// let acc = 0;
+// for (let i = 0; i < numbers.length; i++) {
+// acc = acc + numbers[i] / numbers.length;
+// }
 
-console.log("El resultado es: " + acc);
+// console.log("El resultado es: " + acc);
 
 // MAP 1
 
@@ -535,4 +535,53 @@ fetch("https://api.github.com/users/{username}")
 });
 };
 
-form.addEventListener("submit", handleClickButton);
+// form.addEventListener("submit", handleClickButton);
+
+//2.14 DOM avanzado
+
+//Ejercicio 1
+
+const numbers = [1, 2, 3];
+// const newItem1 = document.createElement("li");
+// const newItem2 = document.createElement("li");
+// const newItem3 = document.createElement("li");
+// console.log(newItem1);
+
+// const content1 = document.createTextNode(i);
+// console.log(content1);
+ 
+const ul = document.querySelector(".listDom");
+
+numbers.forEach((number) => {
+const newItem = document.createElement("li");
+const textNode = document.createTextNode(number);
+newItem.appendChild(textNode);
+ul.appendChild(newItem);
+console.log(newItem);
+});
+
+//Ejercicio 2
+
+const Madrid = [
+src="./images/Madrid1.webp",
+src="./images/Madrid2.JPG",
+src="./images/Madrid3.jpg",
+];
+
+const Paris = [
+src="./images/Paris1.jpg",
+src="./images/Paris2.jpg",
+src="./images/Paris3.jpg",
+];
+
+const nY = [
+src="./images/NY1.jpg",
+src="./images/NY2.jpeg",
+src="./images/NY3.jpg",
+];
+
+const image1 = document.createElement("img");
+const image2 = document.createElement("img");
+const image3 = document.createElement("img");
+
+
